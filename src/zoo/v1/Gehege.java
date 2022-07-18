@@ -56,10 +56,6 @@ public abstract class Gehege {
 		}
 	}
 	
-	public void removeAnimal(Animal animal) {
-		this.animals.remove(animal);
-	}
-	
 	public void ageAnimals() {
 		for (Animal animal : animals) {
 			animal.getOlder();

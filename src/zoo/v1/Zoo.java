@@ -101,7 +101,18 @@ public class Zoo {
 		System.out.println(wassergehege + " Wassergehege");
 	}
 	
+	public void removeGehege(Gehege gehege) {
+		for (int i = 0; i < this.gehege.size(); i++) {
+			if (gehege.equals(this.gehege.get(i))) {
+				this.gehege.remove(i);
+			}
+		}
+	}
+	
 	public void print() {
+		System.out.println("----------------------------------------------------------");
+		System.out.println("----------------------------------------------------------");
+		System.out.println("----------------------------------------------------------");
 		System.out.println("Name des Zoos: " + this.name);
 		System.out.println("Zoodirektor: " + this.director);
 		System.out.println("Aktuelles Kapital: " + this.capital);
@@ -111,6 +122,9 @@ public class Zoo {
 		for (Gehege g : this.gehege) {
 			g.print();
 		}
+		System.out.println("----------------------------------------------------------");
+		System.out.println("----------------------------------------------------------");
+		System.out.println("----------------------------------------------------------");
 		
 	}
 }
