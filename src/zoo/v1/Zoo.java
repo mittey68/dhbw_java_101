@@ -47,6 +47,7 @@ public class Zoo {
 	
 	public void getVisited() {
 		// Gehege get worth
+		//test
 	}
 }
 
