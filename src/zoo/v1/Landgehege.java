@@ -4,16 +4,17 @@ public class Landgehege extends Gehege {
 	
 	private boolean bepflanzung;
 
-	public Landgehege(AnimalType gehegetype, int length, int width, boolean bepflanzung) {
-		super(gehegetype, length, width);
+	public Landgehege(String name, int length, int width, boolean bepflanzung) {
+		super(name, GehegeType.LAND, length, width);
 		this.bepflanzung = bepflanzung;
-		// TODO Auto-generated constructor stub
 	}
 
-	@Override
 	public int caculateCapacity() {
-		// TODO Auto-generated method stub
-		return 0;
+		int capacity = (super.getLength()*super.getWidth())/1000;
+		if (this.bepflanzung) {
+			capacity = capacity/2;
+		}
+		return capacity;
 	}
 
 }

@@ -4,16 +4,14 @@ public class Luftgehege extends Gehege {
 	
 	private int hoehe;
 
-	public Luftgehege(AnimalType gehegetype, int length, int width, int hoehe) {
-		super(gehegetype, length, width);
+	public Luftgehege(String name, int length, int width, int hoehe) {
+		super(name, GehegeType.AIR, length, width);
 		this.hoehe = hoehe;
-		// TODO Auto-generated constructor stub
 	}
 
-	@Override
 	public int caculateCapacity() {
-		// TODO Auto-generated method stub
-		return 0;
+		int capacity = (super.getLength()*super.getWidth()*this.hoehe)/10000;
+		return capacity;
 	}
 
 }

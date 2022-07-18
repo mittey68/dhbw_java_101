@@ -1,23 +1,33 @@
 package zoo.v1;
 
-public class Bird extends Animal {
-	private String featherColor;
+import java.awt.Color;
 
-	public Bird(String name, AnimalType type, int price, int age, int maxAge, FoodType foodType, String featherColor) {
-		super(name, type, price, age, maxAge, foodType);
+public class Bird extends Animal {
+	private Color featherColor;
+
+	public Bird(String name, int price, Color featherColor) {
+		super(name, GehegeType.AIR, price, 0, 7, FoodType.GRAINS);
 		this.featherColor = featherColor;
 	}
 
-	@Override
 	public int getWorth() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(this.featherColor.equals( Color.YELLOW)) {
+			return price*10;
+		}
+		else if(this.featherColor.equals(Color.GREEN)) {
+			return price*2;
+		}
+		return price;
 	}
 
-	@Override
-	public int print() {
-		// TODO Auto-generated method stub
-		return 0;
+	public void print() {
+		System.out.println("Vogel:");
+		System.out.println("- Name: " + this.name);
+		System.out.println("- Federfarbe: " + this.featherColor);
+		System.out.println("- Tierart: " + this.type);
+		System.out.println("- Aktueller Wert: " + this.getWorth());
+		System.out.println("- Alter: " + this.age);
+		System.out.println("- Geschätzte Lebenserwartung: " + this.maxAge);
 	}
 	
 	

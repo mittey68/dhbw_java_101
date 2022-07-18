@@ -40,14 +40,78 @@ public class Zoo {
 	
 	// methods
 	
-	public int calculateWorth() {
-		return 0;
+	
+	// Upcast Downcast
+	public void addGehege(Gehege gehege) {
+		this.gehege.add(gehege);
 	}
 	
+	public int calculateWorth() {
+		int worth = 0;
+		for (Gehege gehege : this.gehege) {
+			worth += gehege.worthOfEnclosure();
+		}
+		return worth;
+	}
+	
+	public int calculateFoodCosts() {
+		int costs = 0;
+		for (Gehege gehege : this.gehege) {
+			costs += gehege.feedAnimals();
+		}
+		return costs;
+	}
+	
+	public void ageAnimals() {
+		for (Gehege gehege : this.gehege) {
+			gehege.ageAnimals();
+		}
+	}
+	
+	public void removeDeadAnimals() {
+		for (Gehege gehege : this.gehege) {
+			gehege.removeDeadAnimals();
+		}
+	}
 	
 	public void getVisited() {
-		// Gehege get worth
-		//test
+		this.capital += (calculateWorth()-calculateFoodCosts());
+		this.capital -= 1000; //Fixkosten
+		ageAnimals();
+		removeDeadAnimals();
+	}
+	
+	public void anzahlGehegetypen() {
+		int landgehege = 0;
+		int luftgehege = 0;
+		int wassergehege = 0;
+		for (Gehege gehege : this.gehege) {
+			if(gehege instanceof Landgehege) {
+				landgehege++;
+			}
+			else if(gehege instanceof Luftgehege) {
+				luftgehege++;
+			}
+			else if(gehege instanceof Wassergehege) {
+				wassergehege++;
+			}
+		}
+		System.out.println(landgehege + " Landgehege");
+		System.out.println(luftgehege + " Luftgehege");
+		System.out.println(wassergehege + " Wassergehege");
+	}
+	
+	public void print() {
+		System.out.println("Name des Zoos: " + this.name);
+		System.out.println("Zoodirektor: " + this.director);
+		System.out.println("Aktuelles Kapital: " + this.capital);
+		System.out.println("Anzahl unserer Gehege:");
+		anzahlGehegetypen();
+		System.out.println("Unsere Tiere:");
+		for (Gehege g : this.gehege) {
+			g.print();
+		}
+		
 	}
 }
 

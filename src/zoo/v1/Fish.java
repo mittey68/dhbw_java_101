@@ -3,21 +3,26 @@ package zoo.v1;
 public class Fish extends Animal {
 	private boolean venomous;
 
-	public Fish(String name, AnimalType type, int price, int age, int maxAge, FoodType foodType, boolean venomous) {
-		super(name, type, price, age, maxAge, foodType);
+	public Fish(String name, int price, boolean venomous) {
+		super(name, GehegeType.WATER, price, 0, 5, FoodType.FISHFOOD);
 		this.venomous = venomous;
 	}
 
-	@Override
 	public int getWorth() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(this.venomous) {
+			return price*3;
+		}
+		return price;
 	}
 
-	@Override
-	public int print() {
-		// TODO Auto-generated method stub
-		return 0;
+	public void print() {
+		System.out.println("Fisch:");
+		System.out.println("- Name: " + this.name);
+		System.out.println("- Giftig? " + this.venomous);
+		System.out.println("- Tierart: " + this.type);
+		System.out.println("- Aktueller Wert: " + this.getWorth());
+		System.out.println("- Alter: " + this.age);
+		System.out.println("- Geschätzte Lebenserwartung: " + this.maxAge);
 	}
 	
 	
