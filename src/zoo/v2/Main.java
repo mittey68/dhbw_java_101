@@ -1,28 +1,26 @@
-package zoo.v3;
-
-import java.awt.Color;
+package zoo.v2;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// Pferde erstellen
-		Horse horse1 = new Horse("Gisela", 1000, "Schimmel");
-		Horse horse2 = new Horse("Peter", 4600, "Schimmel");
-		Horse horse3 = new Horse("Horst", 300, "Schimmel");
+		Animal horse1 = new Animal("Pferd 1", 1000, 10, GehegeType.LAND, FoodType.HAY);
+		Animal horse2 = new Animal("Pferd 2", 4600, 10, GehegeType.LAND, FoodType.HAY);
+		Animal horse3 = new Animal("Pferd 3", 300, 10, GehegeType.LAND, FoodType.HAY);
 		// Vögel erstellen
-		Bird bird1 = new Bird("Fritz", 60, Color.YELLOW);
-		Bird bird2 = new Bird("Quirin", 30, Color.GREEN);
-		Bird bird3 = new Bird("Felix", 40, Color.BLUE);
+		Animal bird1 = new Animal("Vogel 1", 60, 7, GehegeType.AIR, FoodType.GRAINS);
+		Animal bird2 = new Animal("Vogel 2", 30, 7, GehegeType.AIR, FoodType.GRAINS);
+		Animal bird3 = new Animal("Vogel 3", 40, 7, GehegeType.AIR, FoodType.GRAINS);
 		// Fische erstellen
-		Fish fish1 = new Fish("Uwe", 50, true);
-		Fish fish2 = new Fish("Nathan", 30, false);
-		Fish fish3 = new Fish("Nemo", 25, false);
+		Animal fish1 = new Animal("Fisch 1", 50, 5, GehegeType.WATER, FoodType.FISHFOOD);
+		Animal fish2 = new Animal("Fisch 2", 30, 5, GehegeType.WATER, FoodType.FISHFOOD);
+		Animal fish3 = new Animal("Fisch 3", 25, 5, GehegeType.WATER, FoodType.FISHFOOD);
 		
 		// Gehege erstellen
-		Gehege gehege1 = new Landgehege("Pferdekoppel", 200, 300, true);
-		Gehege gehege2 = new Luftgehege("Vogelvoliere", 150, 200, 100);
-		Gehege gehege3 = new Wassergehege("Aquarium", 400, 300, 120);
-		Gehege vielZuKleinesGehege = new Landgehege(" Viel zu kleines Gehege", 1, 1, false);
+		Gehege gehege1 = new Gehege("Pferdekoppel",GehegeType.LAND, 200, 300);
+		Gehege gehege2 = new Gehege("Vogelvoliere",GehegeType.AIR, 150, 200);
+		Gehege gehege3 = new Gehege("Aquarium",GehegeType.WATER, 400, 300);
+		Gehege vielZuKleinesGehege = new Gehege(" Viel zu kleines Gehege",GehegeType.LAND, 1, 1);
 		
 		// Fehler testen
 		vielZuKleinesGehege.addAninmal(horse1);
@@ -58,7 +56,6 @@ public class Main {
 		gehege2.ageAnimals();
 		gehege2.ageAnimals();
 		
-		gehege3.ageAnimals();
 		gehege3.ageAnimals();
 		gehege3.ageAnimals();
 		gehege3.ageAnimals();

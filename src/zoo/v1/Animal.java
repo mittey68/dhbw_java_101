@@ -1,16 +1,16 @@
 package zoo.v1;
 
 public class Animal {
-	protected String name;
-	protected int price;
-	protected int age;
-	protected int maxAge;
-	protected boolean alive;
+	private String name;
+	private int price;
+	private int age;
+	private int maxAge;
+	private boolean alive;
 	
-	public Animal(String name, int price, int age, int maxAge) {
+	public Animal(String name, int price, int maxAge) {
 		this.name = name;
 		this.price = price;
-		this.age = age;
+		this.age = 0;
 		this.maxAge = maxAge;
 		this.alive = true;
 	}
@@ -40,8 +40,10 @@ public class Animal {
 
 
 	public void getOlder() {
-		this.age++;
-		if (this.age > this.maxAge) {
+		if (this.age < this.maxAge) {
+			this.age++;
+		}
+		else {
 			this.alive = false;
 		}
 	}
@@ -60,8 +62,7 @@ public class Animal {
 		System.out.println("- Aktueller Wert: " + this.getWorth());
 		System.out.println("- Alter: " + this.age);
 		System.out.println("- Geschätzte Lebenserwartung: " + this.maxAge);
+		System.out.println("- Am Leben?: " + this.alive);
+		
 	}
-	
-	
-	
 }

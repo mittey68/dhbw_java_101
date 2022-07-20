@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class Gehege {
 	protected String name;
-	protected GehegeType gehegetype;
+	protected GehegeType gehegeType;
 	protected ArrayList<Animal> animals;
 	protected int length;
 	protected int width;
@@ -12,7 +12,7 @@ public abstract class Gehege {
 	
 	public Gehege(String name, GehegeType gehegetype, int length, int width) {
 		this.name = name;
-		this.gehegetype = gehegetype;
+		this.gehegeType = gehegetype;
 		this.animals = new ArrayList<>();
 		this.length = length;
 		this.width = width;
@@ -22,7 +22,7 @@ public abstract class Gehege {
 	// Getters
 
 	public GehegeType getGehegetype() {
-		return gehegetype;
+		return gehegeType;
 	}
 
 	public ArrayList<Animal> getAnimals() {
@@ -43,12 +43,12 @@ public abstract class Gehege {
 	
 	public void addAninmal(Animal animal) {
 		if(this.caculateCapacity()>this.animalsInside) {
-			if (animal.getType().equals(this.gehegetype)) {
+			if (animal.getGehegeType().equals(this.gehegeType)) {
 				this.animals.add(animal);
 				this.animalsInside++;
 			}
 			else {
-				System.out.println("Dieses Tier passt nicht in ein " + this.gehegetype.getDescription() + ". Es benötigt ein " + animal.getType().getDescription());
+				System.out.println("Dieses Tier passt nicht in ein " + this.gehegeType.getDescription() + ". Es benötigt ein " + animal.getGehegeType().getDescription());
 			}
 		}
 		else {
@@ -60,6 +60,7 @@ public abstract class Gehege {
 		for (Animal animal : animals) {
 			animal.getOlder();
 		}
+		removeDeadAnimals();
 	}
 	
 	public void removeDeadAnimals() {
@@ -67,6 +68,7 @@ public abstract class Gehege {
 			Animal animal = this.animals.get(i);
 			if (animal.getAlive() == false) {
 				this.animals.remove(i);
+				this.animalsInside--;
 			}
 		}
 	}
@@ -89,11 +91,11 @@ public abstract class Gehege {
 	
 	public void print() {
 		System.out.println("Gehegename: " + this.name);
+		System.out.println("Gehegetyp: " + this.gehegeType);
+		System.out.println("Gehegekapazität: " + this.caculateCapacity());
+		System.out.println("Tiere im Gehege: " + this.animalsInside);
 		for (Animal a: this.animals) {
 			a.print();
 		}
-	}
-	
-	
-	
+	}	
 }

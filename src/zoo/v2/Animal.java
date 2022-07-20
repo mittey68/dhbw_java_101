@@ -1,13 +1,13 @@
-package zoo.v5;
+package zoo.v2;
 
-public abstract class Animal {
-	protected String name;
-	protected int price;
-	protected int age;
-	protected int maxAge;
-	protected boolean alive;
-	protected GehegeType gehegeType;
-	protected FoodType foodType;
+public class Animal {
+	private String name;
+	private int price;
+	private int age;
+	private int maxAge;
+	private boolean alive;
+	private GehegeType gehegeType;
+	private FoodType foodType;
 	
 	public Animal(String name, int price, int maxAge, GehegeType gehegeType, FoodType foodType) {
 		this.name = name;
@@ -59,11 +59,27 @@ public abstract class Animal {
 			this.alive = false;
 		}
 	}
-	public abstract int getWorth();
+	public int getWorth() {
+		if(this.age <= 5) {
+			return this.price/2;
+		}
+		else {
+			return this.price;
+		}
+	}
 	
 	public int feed() {
 		return this.foodType.getCost();
 	}
 
-	public abstract void print();
+	public void print() {
+		System.out.println("Tier:");
+		System.out.println("- Name: " + this.name);
+		System.out.println("- Tierart: " + this.gehegeType);
+		System.out.println("- Aktueller Wert: " + this.getWorth());
+		System.out.println("- Alter: " + this.age);
+		System.out.println("- Geschätzte Lebenserwartung: " + this.maxAge);
+		System.out.println("- Am Leben?: " + this.alive);
+		
+	}
 }

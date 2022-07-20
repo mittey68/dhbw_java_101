@@ -1,4 +1,4 @@
-package zoo.v8;
+package zoo.v2;
 
 public enum FoodType {
 	/*

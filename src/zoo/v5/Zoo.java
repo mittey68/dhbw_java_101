@@ -68,17 +68,10 @@ public class Zoo {
 		}
 	}
 	
-	public void removeDeadAnimals() {
-		for (Gehege gehege : this.gehege) {
-			gehege.removeDeadAnimals();
-		}
-	}
-	
 	public void getVisited() {
 		this.capital += (calculateWorth()-calculateFoodCosts());
 		this.capital -= 1000; //Fixkosten
-		ageAnimals();
-		removeDeadAnimals();
+		this.ageAnimals();
 	}
 	
 	public void anzahlGehegetypen() {
