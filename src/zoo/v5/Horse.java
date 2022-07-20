@@ -25,6 +25,7 @@ public class Horse extends Animal {
 		System.out.println("- Name: " + this.name);
 		System.out.println("- Rasse: " + this.race);
 		System.out.println("- Tierart: " + this.gehegeType);
+		System.out.println("- Preis: " + this.price);
 		System.out.println("- Aktueller Wert: " + this.getWorth());
 		System.out.println("- Alter: " + this.age);
 		System.out.println("- Geschätzte Lebenserwartung: " + this.maxAge);
