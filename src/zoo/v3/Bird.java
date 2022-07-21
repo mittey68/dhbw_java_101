@@ -6,7 +6,7 @@ public class Bird extends Animal {
 	private Color featherColor;
 
 	public Bird(String name, int price, Color featherColor) {
-		super(name, price, 7, GehegeType.AIR, FoodType.GRAINS);
+		super(name, price, 7, EnclosureType.AIR, FoodType.GRAINS);
 		this.featherColor = featherColor;
 	}
 

@@ -4,7 +4,7 @@ public class Fish extends Animal {
 	private boolean venomous;
 
 	public Fish(String name, int price, boolean venomous) {
-		super(name, price, 5, GehegeType.WATER, FoodType.FISHFOOD);
+		super(name, price, 5, EnclosureType.WATER, FoodType.FISHFOOD);
 		this.venomous = venomous;
 	}
 

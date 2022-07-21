@@ -1,6 +1,6 @@
-package zoo.v3;
+package zoo.v4;
 
-public enum GehegeType {
+public enum EnclosureType {
 	/*
 	 * Aufzaehlungskonstanten
 	 */
@@ -8,7 +8,7 @@ public enum GehegeType {
 	
 	private String description;
 
-	GehegeType(String description) {
+	EnclosureType(String description) {
 		this.description = description;
 	}
 

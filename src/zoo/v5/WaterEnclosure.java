@@ -1,11 +1,11 @@
-package zoo.v4;
+package zoo.v5;
 
-public class Wassergehege extends Gehege {
+public class WaterEnclosure extends Enclosure {
 	
 	private int waterCapacity;
 
-	public Wassergehege(String name, int length, int width, int waterCapacity) {
-		super(name, GehegeType.WATER, length, width);
+	public WaterEnclosure(String name, int length, int width, int waterCapacity) {
+		super(name, EnclosureType.WATER, length, width);
 		this.waterCapacity = waterCapacity;
 	}
 

@@ -4,12 +4,12 @@ public enum FoodType {
 	/*
 	 * Aufzaehlungskonstanten
 	 */
-	GRAINS(5, GehegeType.AIR), HAY(3, GehegeType.LAND),FISHFOOD(10, GehegeType.WATER);
+	GRAINS(5, EnclosureType.AIR), HAY(3, EnclosureType.LAND),FISHFOOD(10, EnclosureType.WATER);
 	
 	private int cost;
-	private GehegeType suitableFor;
+	private EnclosureType suitableFor;
 	
-	FoodType(int cost, GehegeType suitableFor) {
+	FoodType(int cost, EnclosureType suitableFor) {
 		this.cost = cost;
 		this.suitableFor = suitableFor;
 	}
@@ -18,7 +18,7 @@ public enum FoodType {
 		return cost;
 	}
 
-	public GehegeType getSuitableFor() {
+	public EnclosureType getSuitableFor() {
 		return suitableFor;
 	}
 	

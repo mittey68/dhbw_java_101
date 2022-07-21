@@ -6,7 +6,7 @@ public class Zoo {
 	private String name;
 	private String director;
 	private int capital;
-	private ArrayList<Gehege> gehege;
+	private ArrayList<Enclosure> gehege;
 	
 	public Zoo(String name, String director, int capital) {
 		super();
@@ -29,7 +29,7 @@ public class Zoo {
 		return capital;
 	}
 	
-	public ArrayList<Gehege> getGehege() {
+	public ArrayList<Enclosure> getGehege() {
 		return gehege;
 	}
 
@@ -42,13 +42,13 @@ public class Zoo {
 	
 	
 	// Upcast Downcast
-	public void addGehege(Gehege gehege) {
+	public void addGehege(Enclosure gehege) {
 		this.gehege.add(gehege);
 	}
 	
 	public int calculateWorth() {
 		int worth = 0;
-		for (Gehege gehege : this.gehege) {
+		for (Enclosure gehege : this.gehege) {
 			worth += gehege.worthOfEnclosure();
 		}
 		return worth;
@@ -56,14 +56,14 @@ public class Zoo {
 	
 	public int calculateFoodCosts() {
 		int costs = 0;
-		for (Gehege gehege : this.gehege) {
+		for (Enclosure gehege : this.gehege) {
 			costs += gehege.feedAnimals();
 		}
 		return costs;
 	}
 	
 	public void ageAnimals() {
-		for (Gehege gehege : this.gehege) {
+		for (Enclosure gehege : this.gehege) {
 			gehege.ageAnimals();
 		}
 	}
@@ -78,14 +78,14 @@ public class Zoo {
 		int landgehege = 0;
 		int luftgehege = 0;
 		int wassergehege = 0;
-		for (Gehege gehege : this.gehege) {
-			if(gehege instanceof Landgehege) {
+		for (Enclosure gehege : this.gehege) {
+			if(gehege instanceof LandEnclosure) {
 				landgehege++;
 			}
-			else if(gehege instanceof Luftgehege) {
+			else if(gehege instanceof AirEnclosure) {
 				luftgehege++;
 			}
-			else if(gehege instanceof Wassergehege) {
+			else if(gehege instanceof WaterEnclosure) {
 				wassergehege++;
 			}
 		}
@@ -94,7 +94,7 @@ public class Zoo {
 		System.out.println(wassergehege + " Wassergehege");
 	}
 	
-	public void removeGehege(Gehege gehege) {
+	public void removeGehege(Enclosure gehege) {
 		for (int i = 0; i < this.gehege.size(); i++) {
 			if (gehege.equals(this.gehege.get(i))) {
 				this.gehege.remove(i);
@@ -112,7 +112,7 @@ public class Zoo {
 		System.out.println("Anzahl unserer Gehege:");
 		anzahlGehegetypen();
 		System.out.println("Unsere Tiere:");
-		for (Gehege g : this.gehege) {
+		for (Enclosure g : this.gehege) {
 			g.print();
 		}
 		System.out.println("----------------------------------------------------------");

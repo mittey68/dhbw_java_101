@@ -1,16 +1,16 @@
-package zoo.v4;
+package zoo.v2;
 
 import java.util.ArrayList;
 
-public abstract class Gehege {
-	protected String name;
-	protected GehegeType gehegeType;
-	protected ArrayList<Animal> animals;
-	protected int length;
-	protected int width;
-	protected int animalsInside;
+public class Enclosure {
+	private String name;
+	private EnclosureType gehegeType;
+	private ArrayList<Animal> animals;
+	private int length;
+	private int width;
+	private int animalsInside;
 	
-	public Gehege(String name, GehegeType gehegetype, int length, int width) {
+	public Enclosure(String name, EnclosureType gehegetype, int length, int width) {
 		this.name = name;
 		this.gehegeType = gehegetype;
 		this.animals = new ArrayList<>();
@@ -21,7 +21,7 @@ public abstract class Gehege {
 	
 	// Getters
 
-	public GehegeType getGehegetype() {
+	public EnclosureType getGehegetype() {
 		return gehegeType;
 	}
 
@@ -39,7 +39,9 @@ public abstract class Gehege {
 	
 	//Methods
 	
-	public abstract int caculateCapacity();
+	public int caculateCapacity() {
+		return (this.length*this.width)/1000;
+	}
 	
 	public void addAninmal(Animal animal) {
 		if(this.caculateCapacity()>this.animalsInside) {

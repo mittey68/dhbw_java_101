@@ -2,15 +2,15 @@ package zoo.v5;
 
 import java.util.ArrayList;
 
-public abstract class Gehege {
+public abstract class Enclosure {
 	protected String name;
-	protected GehegeType gehegeType;
+	protected EnclosureType gehegeType;
 	protected ArrayList<Animal> animals;
 	protected int length;
 	protected int width;
 	protected int animalsInside;
 	
-	public Gehege(String name, GehegeType gehegetype, int length, int width) {
+	public Enclosure(String name, EnclosureType gehegetype, int length, int width) {
 		this.name = name;
 		this.gehegeType = gehegetype;
 		this.animals = new ArrayList<>();
@@ -21,7 +21,7 @@ public abstract class Gehege {
 	
 	// Getters
 
-	public GehegeType getGehegetype() {
+	public EnclosureType getGehegetype() {
 		return gehegeType;
 	}
 

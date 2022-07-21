@@ -34,10 +34,10 @@ public class Main {
 		Fish fish3 = new Fish("Nemo", 25, false);
 		
 		// Gehege erstellen
-		Gehege gehege1 = new Landgehege("Pferdekoppel", 200, 300, true);
-		Gehege gehege2 = new Luftgehege("Vogelvoliere", 150, 200, 100);
-		Gehege gehege3 = new Wassergehege("Aquarium", 400, 300, 120);
-		Gehege vielZuKleinesGehege = new Landgehege(" Viel zu kleines Gehege", 1, 1, false);
+		Enclosure gehege1 = new LandEnclosure("Pferdekoppel", 200, 300, true);
+		Enclosure gehege2 = new AirEnclosure("Vogelvoliere", 150, 200, 100);
+		Enclosure gehege3 = new WaterEnclosure("Aquarium", 400, 300, 120);
+		Enclosure vielZuKleinesGehege = new LandEnclosure(" Viel zu kleines Gehege", 1, 1, false);
 		
 		// Fehler testen
 		vielZuKleinesGehege.addAninmal(horse1);

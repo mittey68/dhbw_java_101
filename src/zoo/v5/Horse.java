@@ -4,7 +4,7 @@ public class Horse extends Animal {
 	private String race;
 
 	public Horse(String name, int price, String race) {
-		super(name, price, 10, GehegeType.LAND, FoodType.HAY);
+		super(name, price, 10, EnclosureType.LAND, FoodType.HAY);
 		this.race = race;
 	}
 

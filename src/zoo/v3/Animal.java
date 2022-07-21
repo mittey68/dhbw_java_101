@@ -6,10 +6,10 @@ public class Animal {
 	protected int age;
 	protected int maxAge;
 	protected boolean alive;
-	protected GehegeType gehegeType;
+	protected EnclosureType gehegeType;
 	protected FoodType foodType;
 	
-	public Animal(String name, int price, int maxAge, GehegeType gehegeType, FoodType foodType) {
+	public Animal(String name, int price, int maxAge, EnclosureType gehegeType, FoodType foodType) {
 		this.name = name;
 		this.price = price;
 		this.age = 0;
@@ -40,7 +40,7 @@ public class Animal {
 		return alive;
 	}
 	
-	public GehegeType getGehegeType() {
+	public EnclosureType getGehegeType() {
 		return gehegeType;
 	}
 	
