@@ -43,7 +43,7 @@ public class Enclosure {
 		return (this.length*this.width)/1000;
 	}
 	
-	public void addAninmal(Animal animal) {
+	public void addAnimal(Animal animal) {
 		if(this.caculateCapacity()>this.animalsInside) {
 			if (animal.getGehegeType().equals(this.gehegeType)) {
 				this.animals.add(animal);

@@ -41,7 +41,7 @@ public abstract class Enclosure {
 	
 	public abstract int caculateCapacity();
 	
-	public void addAninmal(Animal animal) {
+	public void addAnimal(Animal animal) {
 		if(this.caculateCapacity()>this.animalsInside) {
 			if (animal.getGehegeType().equals(this.gehegeType)) {
 				this.animals.add(animal);

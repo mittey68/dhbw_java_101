@@ -23,21 +23,21 @@ public class Main {
 		Enclosure vielZuKleinesGehege = new Enclosure(" Viel zu kleines Gehege",EnclosureType.LAND, 1, 1);
 		
 		// Fehler testen
-		vielZuKleinesGehege.addAninmal(horse1);
-		gehege2.addAninmal(horse1);
+		vielZuKleinesGehege.addAnimal(horse1);
+		gehege2.addAnimal(horse1);
 		
 		// Tiere zum Gehege hinzufügen
-		gehege1.addAninmal(horse1);
-		gehege1.addAninmal(horse2);
-		gehege1.addAninmal(horse3);
+		gehege1.addAnimal(horse1);
+		gehege1.addAnimal(horse2);
+		gehege1.addAnimal(horse3);
 		
-		gehege2.addAninmal(bird1);
-		gehege2.addAninmal(bird2);
-		gehege2.addAninmal(bird3);
+		gehege2.addAnimal(bird1);
+		gehege2.addAnimal(bird2);
+		gehege2.addAnimal(bird3);
 		
-		gehege3.addAninmal(fish1);
-		gehege3.addAninmal(fish2);
-		gehege3.addAninmal(fish3);
+		gehege3.addAnimal(fish1);
+		gehege3.addAnimal(fish2);
+		gehege3.addAnimal(fish3);
 		
 		// Gehege ausgeben
 		gehege1.print();
