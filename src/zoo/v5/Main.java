@@ -57,9 +57,9 @@ public class Main {
 		gehege3.addAninmal(fish3);
 		
 		// Gehege zum Zoo hinzufügen
-		zoo.addGehege(gehege1);
-		zoo.addGehege(gehege2);
-		zoo.addGehege(gehege3);
+		zoo.addEnclosure(gehege1);
+		zoo.addEnclosure(gehege2);
+		zoo.addEnclosure(gehege3);
 		
 		zoo.print();
 		// Zoobesuche 
