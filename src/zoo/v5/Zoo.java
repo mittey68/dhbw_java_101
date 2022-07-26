@@ -37,10 +37,7 @@ public class Zoo {
 		this.capital = capital;
 	}
 	
-	// methods
-	
-	
-	// Upcast Downcast
+	// Methods
 	public void addEnclosure (Enclosure enclosure) {
 		this.enclosures.add(enclosure);
 	}
@@ -93,6 +90,8 @@ public class Zoo {
 		System.out.println(wassergehege + " Wassergehege");
 	}
 	
+	
+	// not longer needed
 //	public void removeGehege(Enclosure enclosure) {
 //		for (int i = 0; i < this.enclosures.size(); i++) {
 //			if (gehege.equals(this.enclosures.get(i))) {

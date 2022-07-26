@@ -49,8 +49,6 @@ public class Animal {
 	}
 	
 	//Methods
-
-
 	public void getOlder() {
 		if (this.age < this.maxAge) {
 			this.age++;

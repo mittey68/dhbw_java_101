@@ -20,7 +20,6 @@ public class Enclosure {
 	}
 	
 	// Getters
-
 	public EnclosureType getGehegetype() {
 		return gehegeType;
 	}
@@ -38,7 +37,6 @@ public class Enclosure {
 	}
 	
 	//Methods
-	
 	public int caculateCapacity() {
 		return (this.length*this.width)/1000;
 	}
