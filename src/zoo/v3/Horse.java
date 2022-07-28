@@ -32,6 +32,12 @@ public class Horse extends Animal {
 		System.out.println("- Am Leben?: " + this.alive);
 	}
 	
+	// 2. Möglichkeit:
+//	public void print() {
+//		super.print();
+//		System.out.println("- Rasse: " + this.race);
+//	}
+	
 	
 
 }

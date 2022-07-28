@@ -27,6 +27,12 @@ public class Fish extends Animal {
 		System.out.println("- Am Leben?: " + this.alive);
 	}
 	
+	// 2. Möglichkeit:
+//	public void print() {
+//		super.print();
+//		System.out.println("- Giftig? " + this.venomous);
+//	}
+	
 	
 
 }
