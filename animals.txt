@@ -1,0 +1,3 @@
+Herbert;7800;Araber
+Arthus;25000;Holstein
+Lennox;40000;Haflinger
