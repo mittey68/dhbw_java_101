@@ -1,23 +1,25 @@
 package zoo.v6;
 
 import java.awt.Color;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		// Zoo erstellen 
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Gibt bitte den Namen deines Zoos ein: ");
-		String name = scanner.nextLine();
+		String zooName = scanner.nextLine();
 		System.out.print("Gibt deinen Namen ein: ");
-		String director = scanner.nextLine();
+		String zooDirector = scanner.nextLine();
 		scanner.close();
 		// calculate capital
 		Random rnd = new Random();
-		int capital = rnd.nextInt(8000) + 2000;
-		Zoo zoo = new Zoo(name, director, capital);
+		int zooCapital = rnd.nextInt(8000) + 2000;
+		Zoo zoo = new Zoo(zooName, zooDirector, zooCapital);
 		zoo.print();
 		
 		// Pferde erstellen
@@ -60,6 +62,23 @@ public class Main {
 		zoo.addEnclosure(gehege1);
 		zoo.addEnclosure(gehege2);
 		zoo.addEnclosure(gehege3);
+
+
+		// Pferde über Dateinauslese erstellen
+		File file = new File("animals.txt");
+        Scanner fileScanner = new Scanner(file);
+
+        while (fileScanner.hasNextLine()) {
+            String line = fileScanner.nextLine();
+            String[] array = line.split(";");
+			String horseName = array[0];
+			int horsePrice = Integer.valueOf(array[1]);
+			String horseRace = array[2];
+			Horse horse = new Horse(horseName,horsePrice,horseRace);
+			gehege1.addAnimal(horse);
+        }
+        fileScanner.close();
+
 		
 		zoo.print();
 		// Zoobesuche 
