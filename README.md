@@ -77,6 +77,6 @@ Test snfjdksaf
 
 ## Musterlösung
 
-Die Musterlösung ist verfügbar unter: [GitHub Repository](https://github.com/mittey68/prog-tutorium).
+Die Musterlösung ist verfügbar unter: [GitHub Repository](https://github.com/mittey68/prog-tutorium/src/zoo).
 
 Viel Erfolg beim Bearbeiten der Aufgaben!
