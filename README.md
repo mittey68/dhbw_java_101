@@ -34,9 +34,9 @@ Willkommen zu den Aufgaben für den Java 101 Kurs. Diese README bietet eine Übe
 3. UML Diagramm <br>
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/Instance.puml)
 4. Konsolenausgabe <br>
-´´´
+```
 Test snfjdksaf
-´´´
+```
 
 ### Version 2: Erweiterung der bisherigen Klassen und Verknüpfung untereinander
 
