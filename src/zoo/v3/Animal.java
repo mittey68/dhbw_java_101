@@ -1,25 +1,26 @@
 package zoo.v3;
 
 public class Animal {
-	protected String name;
-	protected int price;
-	protected int age;
-	protected int maxAge;
-	protected boolean alive;
-	protected EnclosureType gehegeType;
-	protected FoodType foodType;
+	protected String name; // Name des Tieres
+	protected int price; // Preis des Tieres
+	protected int age; // Alter des Tieres
+	protected int maxAge; // Maximales Alter des Tieres
+	protected boolean alive; // Status, ob das Tier noch lebt
+	protected EnclosureType gehegeType; // Typ des Geheges, in dem das Tier lebt
+	protected FoodType foodType; // Typ des Futters, das das Tier frisst
 	
+	// Konstruktor zur Initialisierung der Attribute
 	public Animal(String name, int price, int maxAge, EnclosureType gehegeType, FoodType foodType) {
 		this.name = name;
 		this.price = price;
-		this.age = 0;
+		this.age = 0; // Tiere sind beim Erstellen immer 0 Jahre alt
 		this.maxAge = maxAge;
-		this.alive = true;
+		this.alive = true; // Es dürfen keine toten Tiere erstellt werden
 		this.gehegeType = gehegeType;
 		this.foodType = foodType;
 	}
 	
-	//Getters
+	// Getter-Methoden für die Attribute
 	public String getName() {
 		return name;
 	}
@@ -48,28 +49,33 @@ public class Animal {
 		return foodType;
 	}
 	
-	//Methods
+	// Methode, um das Alter des Tieres um 1 zu erhöhen
+	// Wenn das Maximalalter erreicht ist, wird alive auf false gesetzt
 	public void getOlder() {
 		if (this.age < this.maxAge) {
 			this.age++;
-		}
-		else {
+		} else {
 			this.alive = false;
 		}
 	}
+
+	// Methode, um den Wert des Tieres zu berechnen
+	// Tiere, die 5 Jahre oder jünger sind, sind die Hälfte ihres Preises wert
+	// Tiere, die älter als 5 Jahre sind, haben den gleichen Wert wie ihr Preis
 	public int getWorth() {
-		if(this.age <= 5) {
-			return this.price/2;
-		}
-		else {
+		if (this.age <= 5) {
+			return this.price / 2;
+		} else {
 			return this.price;
 		}
 	}
 	
+	// Methode, um die Futterkosten des Tieres zurückzugeben
 	public int feed() {
 		return this.foodType.getCost();
 	}
 
+	// Methode, um die Eigenschaften des Tieres auf der Konsole auszugeben
 	public void print() {
 		System.out.println("Tier:");
 		System.out.println("- Name: " + this.name);

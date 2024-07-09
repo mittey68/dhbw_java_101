@@ -2,18 +2,18 @@ package zoo.v2;
 
 public enum EnclosureType {
 	/*
-	 * Aufzaehlungskonstanten
+	 * Aufzählungskonstanten für verschiedene Gehegetypen
 	 */
-	LAND("Landgehege"), WATER("Wassergehege"),AIR("Luftgehege");
+	LAND("Landgehege"), WATER("Wassergehege"), AIR("Luftgehege");
 	
 	private String description; // Beschreibung des Gehegetyps
 
-	// Konstruktor
+	// Konstruktor zur Initialisierung der Beschreibung
 	EnclosureType(String description) {
 		this.description = description;
 	}
 	
-	// Getter für Description
+	// Getter-Methode für die Beschreibung des Gehegetyps
 	public String getDescription() {
 		return description;
 	}
