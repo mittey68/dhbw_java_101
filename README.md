@@ -32,8 +32,7 @@ Musterlösung (keine Garantie):
   - Gib die Tiere erneut aus.
 - UML-Diagramm <br>
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v1/Animal.puml)
-- Konsolenausgabe <br>
-``` Tier:
+- Konsolenausgabe <br> ```Tier:
 - Name: Pferd
 - Preis: 1000
 - Aktueller Wert: 500
@@ -74,7 +73,7 @@ Tier:
 - Aktueller Wert: 15
 - Alter: 5
 - Geschätzte Lebenserwartung: 5
-- Am Leben?: false ```
+- Am Leben?: false```
 
 ### Version 2 – Erweiterung der bisherigen Klassen und Verknüpfung untereinander
 - Verändere die Klasse Animal wie angegeben.
@@ -100,13 +99,66 @@ Tier:
   - Gib die Gehege auf der Konsole aus.
   - Lasse die Tiere im Gehege altern.
   - Gib die Tiere auf der Konsole aus & teste, ob die Alterung funktioniert.
+- UML-Diagramme <br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/Animal.puml)<br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/Enclosure.puml)<br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/FoodType.puml)<br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/EnclosureType.puml)
 
-**Hinweis: UML-Diagramme und Konsolenausgaben wurden entfernt.**
+- Hilfsklassen und -methoden
+   - `Enum EnclosureType` <br>```public enum EnclosureType {
+	/*
+	 * Aufzaehlungskonstanten
+	 */
+	LAND("Landgehege"), WATER("Wassergehege"),AIR("Luftgehege");
+	
+	private String description; // Beschreibung des Gehegetyps
 
-### Hilfsklassen und -methoden
-- `Enum EnclosureType`
-- `Enum FoodType`
-- Hilfsmethode `removeDeadAnimals()`
+	// Konstruktor
+	EnclosureType(String description) {
+		this.description = description;
+	}
+	
+	// Getter für Description
+	public String getDescription() {
+		return description;
+	}
+}```
+   - `Enum FoodType`<br>```public enum FoodType {
+	/*
+	 * Aufzaehlungskonstanten
+	 */
+	GRAINS(5, EnclosureType.AIR), HAY(3, EnclosureType.LAND),FISHFOOD(10, EnclosureType.WATER);
+	
+	private int cost; // Kosten des Tierfutter
+	private EnclosureType suitableFor; // GehegeTyp für das Futter
+	
+	// Konstruktor
+	FoodType(int cost, EnclosureType suitableFor) {
+		this.cost = cost;
+		this.suitableFor = suitableFor;
+	}
+	
+	// Getter für Kosten
+	public int getCost() {
+		return cost;
+	}
+	
+	// Getter für Gehegetyp
+	public EnclosureType getSuitableFor() {
+		return suitableFor;
+	}
+	
+}```
+   - Hilfsmethode `removeDeadAnimals()`<br>```public void removeDeadAnimals() {
+		for (int i = 0; i < this.animals.size(); i++) {
+			Animal animal = this.animals.get(i);
+			if (animal.getAlive() == false) {
+				this.animals.remove(i);
+				this.animalsInside--;
+			}
+		}
+	}```
 
 ### Version 3 – Vererbung
 - Erstelle die 3 Unterklassen der Klasse „Animal“: `Bird`, `Horse` und `Fish`.
@@ -143,12 +195,13 @@ Tier:
   - **Wassergehege:**
     - Wassergehege haben als zusätzliches Attribut die Wasserkapazität.
     - Die Kapazität berechnet sich aus `(Länge*Breite*Wasserkapazität/100.000)`.
-
 - Verändere die Main Klasse entsprechend:
   - Erstelle statt der 9 Animals 3 Horse-, 3 Bird- und 3 Fish-Objekte.
   - Erstelle statt der 3 Gehege jeweils ein Land-, Wasser- und Luftgehege.
-
-**Hinweis: UML-Diagramme und Konsolenausgabe wurden entfernt.**
+- UML-Diagramm `Animal` <br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v3/SubclassesAnimal.puml)
+- UML-Diagramm `Enclosure` <br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v3/SubclassesEnclosure.puml)
 
 ### Version 4 – abstrakte Klassen und Methoden
 - Verändere die Klasse `Animal`:
@@ -177,8 +230,8 @@ Tier:
   - Erstelle den Zoo mit diesen Angaben.
   - Füge dem Zoo die Gehege inklusive der Tiere hinzu.
   - Lasse den Zoo über die Methode `getVisited()` mehrmals Besucher empfangen und prüfe auch die Alterung der Tiere und die Veränderung des Kapitals.
-
-**Hinweis: UML-Diagramme und Konsolenausgabe wurden entfernt.**
+- UML-Diagramm `Zoo` <br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v5/Zoo.puml)
 
 ### Version 6 – Einlesen von Textdateien & Wrapper Classes
 - Erstelle eine Textdatei wie unten angegeben oder lade sie aus dem Repository herunter.
