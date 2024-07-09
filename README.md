@@ -31,7 +31,7 @@ Musterlösung (keine Garantie):
   - Lass die Tiere altern.
   - Gib die Tiere erneut aus.
 - UML-Diagramm <br>
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v1/Animal.puml)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/main/readme/UML/v1/Animal.puml)
 - Konsolenausgabe <br> 
 ```
 Tier:
@@ -103,10 +103,10 @@ Tier:
   - Lasse die Tiere im Gehege altern.
   - Gib die Tiere auf der Konsole aus & teste, ob die Alterung funktioniert.
 - UML-Diagramme <br>
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/Animal.puml)<br>
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/Enclosure.puml)<br>
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/FoodType.puml)<br>
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/EnclosureType.puml)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/main/readme/UML/v2/Animal.puml)<br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/main/readme/UML/v2/Enclosure.puml)<br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/main/readme/UML/v2/FoodType.puml)<br>
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/main/readme/UML/v2/EnclosureType.puml)
 
 - Konsolenausgabe <br> 
 ```
@@ -253,9 +253,9 @@ Tier:
   - Erstelle statt der 9 Animals 3 Horse-, 3 Bird- und 3 Fish-Objekte.
   - Erstelle statt der 3 Gehege jeweils ein Land-, Wasser- und Luftgehege.
 - UML-Diagramm `Animal` <br>
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v3/SubclassesAnimal.puml)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/main/readme/UML/v3/SubclassesAnimal.puml)
 - UML-Diagramm `Enclosure` <br>
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v3/SubclassesEnclosure.puml)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/main/readme/UML/v3/SubclassesEnclosure.puml)
 - Konsolenausgabe <br> 
 ```
 Dieses Gehege ist zu klein. Die Maximalkapazität von 0 ist erreicht.
@@ -326,7 +326,7 @@ Tiere im Gehege: 3
   - Füge dem Zoo die Gehege inklusive der Tiere hinzu.
   - Lasse den Zoo über die Methode `getVisited()` mehrmals Besucher empfangen und prüfe auch die Alterung der Tiere und die Veränderung des Kapitals.
 - UML-Diagramm `Zoo` <br>
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v5/Zoo.puml)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/main/readme/UML/v5/Zoo.puml)
 - Konsolenausgabe <br> 
 ```
 Name des Zoos: Alex Zoo
