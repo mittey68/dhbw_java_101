@@ -1,0 +1,51 @@
+@startuml SubclassesAnimal
+abstract class Animal {
+    ----
+    -String name
+    -double price
+    -int age = 0
+    -int maxAge
+    -boolean alive = true
+    ----
+    +Animal(String, double, int)
+    +String getName()
+    +double getPrice()
+    +int getAge()
+    +int getMaxAge()
+    +boolean getAlive()
+    +void getOlder()
+    +double getWorth()
+    +void print()
+}
+
+class Bird {
+    ----
+    -Color feathercolor
+    ----
+    +Bird(String, double, int, Color)
+    +double getWorth()
+    +void print()
+}
+
+class Horse {
+    ----
+    -String race
+    ----
+    +Horse(String, double, int, String)
+    +double getWorth()
+    +void print()
+}
+
+class Fish {
+    ----
+    -boolean venomous
+    ----
+    +Fish(String, double, int, boolean)
+    +double getWorth()
+    +void print()
+}
+
+Animal <|-- Bird
+Animal <|-- Horse
+Animal <|-- Fish
+@enduml

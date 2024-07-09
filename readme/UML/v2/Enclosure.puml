@@ -1,0 +1,23 @@
+@startuml Enclosure
+class Enclosure {
+    ----
+    -String enclosureType
+    -int length
+    -int width
+    -int animalsInside = 0
+    -List<Animal> animals
+    ----
+    +Enclosure(String, int, int)
+    +String getEnclosureType()
+    +List<Animal> getAnimals()
+    +int getLength()
+    +int getWidth()
+    +int calculateCapacity()
+    +void addAnimal(Animal)
+    +void ageAnimals()
+    +void feedAnimals()
+    +double worthOfEnclosure()
+    +void print()
+    -void removeDeadAnimals()
+}
+@enduml

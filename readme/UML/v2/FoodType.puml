@@ -1,0 +1,8 @@
+@startuml FoodType
+enum FoodType {
+    ----
+    MEAT
+    VEGETABLE
+    FISH
+}
+@enduml

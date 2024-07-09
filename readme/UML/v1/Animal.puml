@@ -1,4 +1,4 @@
-@startuml MyDiagramName
+@startuml Animal
 class Animal {
     ----
     - name: String
