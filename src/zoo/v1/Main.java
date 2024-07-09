@@ -8,30 +8,31 @@ public class Main {
 		Animal bird = new Animal("Vogel", 60, 7);
 		Animal fish = new Animal("Fisch", 30, 5);
 		
-		// Tiere ausgeben
+		// Initiale Eigenschaften der Tiere anzeigen
 		horse.print();
 		bird.print();
 		fish.print();
 		
-		// Tiere altern
-		horse.getOlder();
-		horse.getOlder();
-		horse.getOlder();
-		horse.getOlder();
-		horse.getOlder();
-		horse.getOlder();
-		bird.getOlder();
-		fish.getOlder();
-		fish.getOlder();
-		fish.getOlder();
-		fish.getOlder();
-		fish.getOlder();
-		fish.getOlder();
+		// Alter der Tiere erhöhen
+		horse.getOlder(); // Pferd wird 1 Jahr älter
+		horse.getOlder(); // Pferd wird 2 Jahre älter
+		horse.getOlder(); // Pferd wird 3 Jahre älter
+		horse.getOlder(); // Pferd wird 4 Jahre älter
+		horse.getOlder(); // Pferd wird 5 Jahre älter
+		horse.getOlder(); // Pferd wird 6 Jahre älter
 		
-		// Tiere ausgeben
+		bird.getOlder(); // Vogel wird 1 Jahr älter
+		
+		fish.getOlder(); // Fisch wird 1 Jahr älter
+		fish.getOlder(); // Fisch wird 2 Jahre älter
+		fish.getOlder(); // Fisch wird 3 Jahre älter
+		fish.getOlder(); // Fisch wird 4 Jahre älter
+		fish.getOlder(); // Fisch wird 5 Jahre älter
+		fish.getOlder(); // Fisch wird 6 Jahre älter (jetzt tot)
+		
+		// Aktualisierte Eigenschaften der Tiere anzeigen
 		horse.print();
 		bird.print();
 		fish.print();
 	}
-
 }

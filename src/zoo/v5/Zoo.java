@@ -3,11 +3,12 @@ package zoo.v5;
 import java.util.ArrayList;
 
 public class Zoo {
-	private String name;
-	private String director;
-	private int capital;
-	private ArrayList<Enclosure> enclosures;
+	private String name; // Name des Zoos
+	private String director; // Name des Zoodirektors
+	private int capital; // Kapital des Zoos
+	private ArrayList<Enclosure> enclosures; // Liste der Gehege im Zoo
 	
+	// Konstruktor zur Initialisierung der Attribute
 	public Zoo(String name, String director, int capital) {
 		this.name = name;
 		this.director = director;
@@ -15,7 +16,7 @@ public class Zoo {
 		this.enclosures = new ArrayList<>();
 	}
 
-	// Getters
+	// Getter-Methoden für die Attribute
 	public String getName() {
 		return name;
 	}
@@ -32,16 +33,17 @@ public class Zoo {
 		return enclosures;
 	}
 
-	// Setters
+	// Setter-Methode für das Kapital
 	public void setCapital(int capital) {
 		this.capital = capital;
 	}
 	
-	// Methods
-	public void addEnclosure (Enclosure enclosure) {
+	// Methode, um ein Gehege hinzuzufügen
+	public void addEnclosure(Enclosure enclosure) {
 		this.enclosures.add(enclosure);
 	}
 	
+	// Methode zur Berechnung des Gesamtwerts aller Tiere im Zoo
 	public int calculateWorth() {
 		int worth = 0;
 		for (Enclosure enclosure : this.enclosures) {
@@ -50,6 +52,7 @@ public class Zoo {
 		return worth;
 	}
 	
+	// Methode zur Berechnung der Futterkosten aller Tiere im Zoo
 	public int calculateFoodCosts() {
 		int costs = 0;
 		for (Enclosure enclosure : this.enclosures) {
@@ -58,30 +61,31 @@ public class Zoo {
 		return costs;
 	}
 	
+	// Methode, um alle Tiere im Zoo altern zu lassen
 	public void ageAnimals() {
 		for (Enclosure enclosure : this.enclosures) {
 			enclosure.ageAnimals();
 		}
 	}
 	
+	// Methode, die den Zoo besucht und Kapital basierend auf Tierwert und Futterkosten anpasst
 	public void getVisited() {
-		this.capital += (calculateWorth()-calculateFoodCosts());
-		this.capital -= 1000; //Fixkosten
+		this.capital += (calculateWorth() - calculateFoodCosts());
+		this.capital -= 1000; // Fixkosten
 		this.ageAnimals();
 	}
 	
+	// Methode, um die Anzahl der verschiedenen Gehegetypen im Zoo auszugeben
 	public void numberEnclosureTypes() {
 		int landgehege = 0;
 		int luftgehege = 0;
 		int wassergehege = 0;
 		for (Enclosure enclosure : this.enclosures) {
-			if(enclosure instanceof LandEnclosure) {
+			if (enclosure instanceof LandEnclosure) {
 				landgehege++;
-			}
-			else if(enclosure instanceof AirEnclosure) {
+			} else if (enclosure instanceof AirEnclosure) {
 				luftgehege++;
-			}
-			else if(enclosure instanceof WaterEnclosure) {
+			} else if (enclosure instanceof WaterEnclosure) {
 				wassergehege++;
 			}
 		}
@@ -90,16 +94,7 @@ public class Zoo {
 		System.out.println(wassergehege + " Wassergehege");
 	}
 	
-	
-	// not longer needed
-//	public void removeGehege(Enclosure enclosure) {
-//		for (int i = 0; i < this.enclosures.size(); i++) {
-//			if (gehege.equals(this.enclosures.get(i))) {
-//				this.enclosures.remove(i);
-//			}
-//		}
-//	}
-	
+	// Methode zur Ausgabe der Eigenschaften des Zoos und seiner Gehege auf der Konsole
 	public void print() {
 		System.out.println("----------------------------------------------------------");
 		System.out.println("----------------------------------------------------------");
@@ -116,8 +111,5 @@ public class Zoo {
 		System.out.println("----------------------------------------------------------");
 		System.out.println("----------------------------------------------------------");
 		System.out.println("----------------------------------------------------------");
-		
 	}
 }
-
-
