@@ -108,6 +108,48 @@ Tier:
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/FoodType.puml)<br>
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/EnclosureType.puml)
 
+- Konsolenausgabe <br> 
+```
+Dieses Gehege ist zu klein. Die Maximalkapazität von 0 ist erreicht.
+Dieses Tier passt nicht in ein Luftgehege. Es benötigt ein Landgehege 
+Gehegename: Pferdekoppel
+Gehegetyp: LAND
+Gehegekapazität: 60
+Tiere im Gehege: 3
+Tier:
+- Name: Pferd 1
+- Tierart: LAND
+- Preis: 1000
+- Aktueller Wert: 500
+- Alter: 0
+- Geschätzte Lebenserwartung: 10
+- Am Leben?: true
+Tier:
+- Name: Pferd 2
+- Tierart: LAND
+- Preis: 4600
+- Aktueller Wert: 2300
+- Alter: 0
+- Geschätzte Lebenserwartung: 10
+- Am Leben?: true
+Tier:
+- Name: Pferd 3
+- Tierart: LAND
+- Preis: 300
+- Aktueller Wert: 150
+- Alter: 0
+- Geschätzte Lebenserwartung: 10
+- Am Leben?: true
+Gehegename: Vogelvoliere
+Gehegetyp: AIR
+Gehegekapazität: 30
+Tiere im Gehege: 3
+Tier:
+- Name: Vogel 1
+- Tierart: AIR
+...
+```
+
 - Hilfsklassen und -methoden
    - `Enum EnclosureType` <br>
    ```
@@ -214,6 +256,47 @@ Tier:
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v3/SubclassesAnimal.puml)
 - UML-Diagramm `Enclosure` <br>
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v3/SubclassesEnclosure.puml)
+- Konsolenausgabe <br> 
+```
+Dieses Gehege ist zu klein. Die Maximalkapazität von 0 ist erreicht.
+Dieses Tier passt nicht in ein Luftgehege. Es benötigt ein Landgehege 
+Gehegename: Pferdekoppel
+Gehegetyp: LAND
+Gehegekapazität: 30
+Tiere im Gehege: 3
+Pferd:
+- Name: Gisela
+- Rasse: Schimmel
+- Tierart: LAND
+- Preis: 1000
+- Aktueller Wert: 500
+- Alter: 0
+- Geschätzte Lebenserwartung: 10
+- Am Leben?: true
+Pferd:
+- Name: Peter
+- Rasse: Schimmel
+- Tierart: LAND
+- Preis: 4600
+- Aktueller Wert: 2300
+- Alter: 0
+- Geschätzte Lebenserwartung: 10
+- Am Leben?: true
+Pferd:
+- Name: Horst
+- Rasse: Schimmel
+- Tierart: LAND
+- Preis: 300
+- Aktueller Wert: 150
+- Alter: 0
+- Geschätzte Lebenserwartung: 10
+- Am Leben?: true
+Gehegename: Vogelvoliere
+Gehegetyp: AIR
+Gehegekapazität: 300
+Tiere im Gehege: 3
+...
+```
 
 ### Version 4 – abstrakte Klassen und Methoden
 - Verändere die Klasse `Animal`:
@@ -244,6 +327,26 @@ Tier:
   - Lasse den Zoo über die Methode `getVisited()` mehrmals Besucher empfangen und prüfe auch die Alterung der Tiere und die Veränderung des Kapitals.
 - UML-Diagramm `Zoo` <br>
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v5/Zoo.puml)
+- Konsolenausgabe <br> 
+```
+Name des Zoos: Alex Zoo
+Zoodirektor: Alex
+Aktuelles Kapital: 8613
+Anzahl unserer Gehege:
+1 Landgehege
+1 Luftgehege
+1 Wassergehege
+Unsere Tiere:
+Gehegename: Pferdekoppel
+Gehegetyp: LAND
+Gehegekapazität: 30
+Tiere im Gehege: 3
+Pferd:
+- Name: Gisela
+- Rasse: Schimmel
+- Tierart: LAND
+...
+```
 
 ### Version 6 – Einlesen von Textdateien & Wrapper Classes
 - Erstelle eine Textdatei wie unten angegeben oder lade sie aus dem Repository herunter.
@@ -252,6 +355,12 @@ Tier:
   - Lies die erstellte Datei zeilenweise ein (Hinweis: Wenn die Textdatei im Projektverzeichnis abgelegt wird, kann die relative Pfadangabe `<Name der Textdatei>.txt` verwendet werden).
   - Jede Zeile der Datei gibt die Daten für ein Objekt der Klasse `Horse` an.
   - Erstelle die Pferde mit den eingelesenen Daten aus der txt-Datei & füge sie einem bereits erstellten Gehege hinzu.
+- Textdatei `animals.txt`<br> 
+```
+Herbert;7800;Araber
+Arthus;25000;Holstein
+Lennox;40000;Haflinger
+```
 
 **Hinweis: Textdatei, UML-Diagramme und Konsolenausgabe wurden entfernt.**
 
