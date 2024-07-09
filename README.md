@@ -8,7 +8,7 @@
 - Version 5 – Scanner Zufallszahlen & instanceOf Operator
 - Version 6 – Einlesen von Textdateien & Wrapper Classes
 
-Musterlösungen -- natürlich ohne Garantie -- für jede Version findest du hier: [Musterlösungen](https://github.com/mittey68/dhbw_java_101/tree/development/src/zoo)
+Musterlösungen – natürlich ohne Garantie - für jede Version findest du hier: [Musterlösungen](https://github.com/mittey68/dhbw_java_101/tree/development/src/zoo)
 
 ## Hinweise & Tipps:
 - Erstelle jede Übung als eigenes Package. So behält jede Version ihre Lauffähigkeit trotz Änderungen in der neuen Version.
