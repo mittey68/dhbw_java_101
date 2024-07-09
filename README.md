@@ -19,20 +19,26 @@ Willkommen zu den Aufgaben für den Java 101 Kurs. Diese README bietet eine Übe
   - `+` = public
   - `#` = protected
 - Die verwendeten UML-Diagramme sind von PlantUML und unterscheiden sich von denen in den Vorlesungen.
-- Importiere benötigte Klassen wie `ArrayList`, `Color`, `Scanner`, etc., in den jeweiligen Klassen.
+- Importiere benötigte Klassen wie `ArrayList`, `Color`, `Scanner`, etc., in den jeweiligen Klassen. Eclipse bietet hierfür in der jeweiligen Fehlermeldung einen Quickfix an.
 
 ## Übungen
 
 ### Version 1: Erste Klassen und Methoden erstellen
 
 1. Erstelle die Klasse `Animal` mit folgenden Anforderungen:
-   - Der Konstruktor initialisiert alle Attribute.
-   - Methoden: `getName()`, `getPrice()`, `getAge()`, `getMaxAge()`, `getAlive()`, `getOlder()`, `getWorth()`, `print()`.
+   - Der Konstruktor soll alle(!) Attribute initialisieren. 
+   - Es dürfen dabei keine toten Tiere erstellt werden.
+   - Tiere sind beim erstellen immer 0 Jahre alt.
+   - `getName()`, `getPrice()`, `getAge()`, `getMaxAge()`, `getAlive()` sind die bekannten Get-Methoden.
+   - `getOlder()` soll das Alter eines Tiers um eins erhöhen, außer das Maximalalter ist erreicht. Dann soll das Tier "sterben".
+   - `getWorth()` soll den Wert des Tiers berechnen. 
+   - `print()` soll folgende Konsolenausgabe ergeben.<br>```Test snfjdksaf```
 2. Erstelle die ausführbare Klasse `Main`:
-   - Erstelle und gib drei Tiere auf der Konsole aus.
+   - Erstelle drei Tiere.
+   - Gib diese auf der Konsole aus.
    - Lass die Tiere altern und gib sie erneut aus.
 3. UML Diagramm <br>
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/Instance.puml)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v1/Animal.puml)
 4. Konsolenausgabe <br>
 ```
 Test snfjdksaf
