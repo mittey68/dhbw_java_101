@@ -79,7 +79,7 @@ Tier:
 ```
 
 ### Version 2 – Erweiterung der bisherigen Klassen und Verknüpfung untereinander
-- Verändere die Klasse Animal wie angegeben.
+- Verändere die Klasse Animal wie angegeben:
   - Füge die beiden neuen Attribute ein und initialisiere sie (Hinweis: Beachte die Enumeration Hilfsklassen unten oder schreibe sie anhand von den UML Diagrammen selbst).
   - Erstelle die neuen Getter.
   - Die Methode `feed()` soll die Kosten des jeweiligen FoodType aus dem Attribut foodType ausgeben.
@@ -87,7 +87,7 @@ Tier:
 - Erstelle die Klasse Enclosure wie angegeben.
   - Der Konstruktor soll alle Attribute initialisieren (Hinweis: `animalsInside` sagt aus, wie viele Tiere aktuell im Gehege sind und ist beim Erstellen daher 0).
   - `getEnclosureType()`, `getAnimals()`, `getLength()`, `getWidth()` sind die entsprechenden Getter für die Attribute.
-  - Die Methode `calculateCapacity()` gibt die Maximalkapazität des Geheges wieder. Diese berechnet sich durch `(Länge*Breite)/1000`.
+  - Die Methode `calculateCapacity()` gibt die Maximalkapazität des Geheges wieder. Diese berechnet sich durch "(Länge*Breite)/1000".
   - `addAnimals()` soll das übergebene Animal in das Gehege hinzufügen, vorausgesetzt die Maximalkapazität ist nicht erreicht & das Gehege ist für das entsprechende Tier geeignet (Beachte `gehegeType`). Die Fehlermeldungen können aus der Konsolenausgabe herausgelesen werden.
   - `ageAnimals()` soll alle Tiere im Gehege altern lassen & die unten angegebene Hilfsmethode `removeDeadAnimals()` aufrufen.
   - `feedAnimals()` soll die Gesamtkosten für das Futter von allen Tieren in einem Gehege zurückgeben.
@@ -242,13 +242,13 @@ Tier:
   - Die Unterklassen sollen die Methode `calculateCapacity()` der Oberklasse überschreiben.
   - **Landgehege:**
     - Landgehege haben das zusätzliche Attribut „planting“, welches angibt, ob Bepflanzung im Gehege vorhanden ist.
-    - Die Kapazität berechnet sich aus `(Länge*Breite/1.000)` und halbiert sich, wenn Bepflanzung vorhanden ist.
+    - Die Kapazität berechnet sich aus "(Länge*Breite/1.000)" und halbiert sich, wenn Bepflanzung vorhanden ist.
   - **Luftgehege:**
     - Luftgehege haben als zusätzliches Attribut die Höhe.
-    - Die Kapazität berechnet sich aus `(Länge*Breite*Höhe/10.000)`.
+    - Die Kapazität berechnet sich aus "(Länge*Breite*Höhe/10.000)".
   - **Wassergehege:**
     - Wassergehege haben als zusätzliches Attribut die Wasserkapazität.
-    - Die Kapazität berechnet sich aus `(Länge*Breite*Wasserkapazität/100.000)`.
+    - Die Kapazität berechnet sich aus "(Länge*Breite*Wasserkapazität/100.000)".
 - Verändere die Main Klasse entsprechend:
   - Erstelle statt der 9 Animals 3 Horse-, 3 Bird- und 3 Fish-Objekte.
   - Erstelle statt der 3 Gehege jeweils ein Land-, Wasser- und Luftgehege.
@@ -361,10 +361,3 @@ Herbert;7800;Araber
 Arthus;25000;Holstein
 Lennox;40000;Haflinger
 ```
-
-**Hinweis: Textdatei, UML-Diagramme und Konsolenausgabe wurden entfernt.**
-
----
-
-Java 101  
-Alexander Mittermeier
