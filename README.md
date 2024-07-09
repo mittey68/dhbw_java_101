@@ -32,7 +32,9 @@ Musterlösung (keine Garantie):
   - Gib die Tiere erneut aus.
 - UML-Diagramm <br>
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v1/Animal.puml)
-- Konsolenausgabe <br> ```Tier:
+- Konsolenausgabe <br> 
+```
+Tier:
 - Name: Pferd
 - Preis: 1000
 - Aktueller Wert: 500
@@ -73,7 +75,8 @@ Tier:
 - Aktueller Wert: 15
 - Alter: 5
 - Geschätzte Lebenserwartung: 5
-- Am Leben?: false```
+- Am Leben?: false
+```
 
 ### Version 2 – Erweiterung der bisherigen Klassen und Verknüpfung untereinander
 - Verändere die Klasse Animal wie angegeben.
@@ -106,51 +109,59 @@ Tier:
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v2/EnclosureType.puml)
 
 - Hilfsklassen und -methoden
-   - `Enum EnclosureType` <br>```public enum EnclosureType {
-	/*
-	 * Aufzaehlungskonstanten
-	 */
-	LAND("Landgehege"), WATER("Wassergehege"),AIR("Luftgehege");
-	
-	private String description; // Beschreibung des Gehegetyps
+   - `Enum EnclosureType` <br>
+   ```
+   public enum EnclosureType {
+      /*
+      * Aufzaehlungskonstanten
+      */
+      LAND("Landgehege"), WATER("Wassergehege"),AIR("Luftgehege");
+      
+      private String description; // Beschreibung des Gehegetyps
 
-	// Konstruktor
-	EnclosureType(String description) {
-		this.description = description;
-	}
-	
-	// Getter für Description
-	public String getDescription() {
-		return description;
-	}
-}```
-   - `Enum FoodType`<br>```public enum FoodType {
-	/*
-	 * Aufzaehlungskonstanten
-	 */
-	GRAINS(5, EnclosureType.AIR), HAY(3, EnclosureType.LAND),FISHFOOD(10, EnclosureType.WATER);
-	
-	private int cost; // Kosten des Tierfutter
-	private EnclosureType suitableFor; // GehegeTyp für das Futter
-	
-	// Konstruktor
-	FoodType(int cost, EnclosureType suitableFor) {
-		this.cost = cost;
-		this.suitableFor = suitableFor;
-	}
-	
-	// Getter für Kosten
-	public int getCost() {
-		return cost;
-	}
-	
-	// Getter für Gehegetyp
-	public EnclosureType getSuitableFor() {
-		return suitableFor;
-	}
-	
-}```
-   - Hilfsmethode `removeDeadAnimals()`<br>```public void removeDeadAnimals() {
+      // Konstruktor
+      EnclosureType(String description) {
+         this.description = description;
+      }
+      
+      // Getter für Description
+      public String getDescription() {
+         return description;
+      }
+   }
+   ```
+   - `Enum FoodType`<br>
+   ```
+   public enum FoodType {
+      /*
+      * Aufzaehlungskonstanten
+      */
+      GRAINS(5, EnclosureType.AIR), HAY(3, EnclosureType.LAND),FISHFOOD(10, EnclosureType.WATER);
+      
+      private int cost; // Kosten des Tierfutter
+      private EnclosureType suitableFor; // GehegeTyp für das Futter
+      
+      // Konstruktor
+      FoodType(int cost, EnclosureType suitableFor) {
+         this.cost = cost;
+         this.suitableFor = suitableFor;
+      }
+      
+      // Getter für Kosten
+      public int getCost() {
+         return cost;
+      }
+      
+      // Getter für Gehegetyp
+      public EnclosureType getSuitableFor() {
+         return suitableFor;
+      }
+      
+   }
+   ```
+   - Hilfsmethode `removeDeadAnimals()`<br>
+   ```
+   public void removeDeadAnimals() {
 		for (int i = 0; i < this.animals.size(); i++) {
 			Animal animal = this.animals.get(i);
 			if (animal.getAlive() == false) {
@@ -158,7 +169,8 @@ Tier:
 				this.animalsInside--;
 			}
 		}
-	}```
+	}
+   ```
 
 ### Version 3 – Vererbung
 - Erstelle die 3 Unterklassen der Klasse „Animal“: `Bird`, `Horse` und `Fish`.
