@@ -31,7 +31,7 @@ Musterlösung (keine Garantie):
   - Lass die Tiere altern.
   - Gib die Tiere erneut aus.
 - UML-Diagramm <br>
-![Animal Diagram](readme/UML/v1/Animal.puml)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mittey68/dhbw-java-101/development/readme/UML/v1/Animal.puml)
 - Konsolenausgabe <br>
 ``` Tier:
 - Name: Pferd
