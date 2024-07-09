@@ -23,7 +23,7 @@ abstract class Enclosure {
 
 class LandEnclosure {
     ----
-    -boolean planting
+    #boolean planting
     ----
     +LandEnclosure(String, int, int, boolean)
     +int calculateCapacity()
@@ -31,7 +31,7 @@ class LandEnclosure {
 
 class AirEnclosure {
     ----
-    -int height
+    #int height
     ----
     +AirEnclosure(String, int, int, int)
     +int calculateCapacity()
@@ -39,7 +39,7 @@ class AirEnclosure {
 
 class WaterEnclosure {
     ----
-    -int waterCapacity
+    #int waterCapacity
     ----
     +WaterEnclosure(String, int, int, int)
     +int calculateCapacity()

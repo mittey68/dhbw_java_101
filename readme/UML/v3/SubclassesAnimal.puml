@@ -20,7 +20,7 @@ abstract class Animal {
 
 class Bird {
     ----
-    -Color feathercolor
+    #Color feathercolor
     ----
     +Bird(String, double, int, Color)
     +double getWorth()
@@ -29,7 +29,7 @@ class Bird {
 
 class Horse {
     ----
-    -String race
+    #String race
     ----
     +Horse(String, double, int, String)
     +double getWorth()
@@ -38,7 +38,7 @@ class Horse {
 
 class Fish {
     ----
-    -boolean venomous
+    #boolean venomous
     ----
     +Fish(String, double, int, boolean)
     +double getWorth()
