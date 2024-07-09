@@ -4,5 +4,11 @@ enum FoodType {
     MEAT
     VEGETABLE
     FISH
+    cost
+    suitableFor
+    ----
+    +FoodType(cost: int, suitableFor: EnclosureType)
+    +getCost() : int
+    +getSuitableFor() : EnclosureType
 }
 @enduml
