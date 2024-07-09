@@ -1,0 +1,25 @@
+@startuml Animal
+class Animal {
+    ----
+    -String name
+    -double price
+    -int age = 0
+    -int maxAge
+    -boolean alive = true
+    -FoodType foodType
+    -EnclosureType enclosureType
+    ----
+    +Animal(String, double, int, FoodType, EnclosureType)
+    +String getName()
+    +double getPrice()
+    +int getAge()
+    +int getMaxAge()
+    +boolean getAlive()
+    +FoodType getFoodType()
+    +EnclosureType getEnclosureType()
+    +void getOlder()
+    +double getWorth()
+    +void feed()
+    +void print()
+}
+@enduml

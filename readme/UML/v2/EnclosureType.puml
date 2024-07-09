@@ -1,0 +1,9 @@
+@startuml EnclosureType
+enum EnclosureType {
+    ----
+    LAND
+    AIR
+    WATER
+}
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml Animal
+class Animal {
+    ----
+    - name: String
+    - price: int
+    - age: int
+    - maxAge: int
+    - alive: boolean
+    ----
+    + Animal(name: String, price: int, age: int, maxAge: int)
+    + getName() : String
+    + getPrice() : int
+    + getAge() : int
+    + getMaxAge() : int
+    + getAlive() : boolean
+    + getOlder() : void
+    + getWorth() : int
+    + print() : void
+}
+@enduml

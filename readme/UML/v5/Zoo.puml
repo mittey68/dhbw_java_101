@@ -1,0 +1,23 @@
+@startuml Zoo
+class Zoo {
+    ----
+    -String name
+    -String director
+    -int capital
+    -List<Enclosure> enclosures
+    ----
+    +Zoo(String, String, int)
+    +String getName()
+    +String getDirector()
+    +int getCapital()
+    +List<Enclosure> getEnclosures()
+    +void setCapital(int)
+    +void addEnclosure(Enclosure)
+    +double calculateWorth()
+    +double calculateFoodCosts()
+    +void ageAnimals()
+    +void getVisited()
+    +void print()
+    +void numberEnclosureTypes()
+}
+@enduml
