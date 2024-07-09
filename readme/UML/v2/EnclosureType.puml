@@ -4,6 +4,10 @@ enum EnclosureType {
     LAND
     AIR
     WATER
+    description
+    ----
+    +EnclosureType(description: String)
+    +getDescription() : String
 }
 
 @enduml
