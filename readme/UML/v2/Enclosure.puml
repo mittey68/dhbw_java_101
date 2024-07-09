@@ -18,6 +18,6 @@ class Enclosure {
     +void feedAnimals()
     +double worthOfEnclosure()
     +void print()
-    -void removeDeadAnimals()
+    +void removeDeadAnimals()
 }
 @enduml
