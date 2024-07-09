@@ -1,6 +1,6 @@
 @startuml MyDiagramName
 class Animal {
-    -- Atributes --
+    ----
     - name: String
     - price: int
     - age: int
