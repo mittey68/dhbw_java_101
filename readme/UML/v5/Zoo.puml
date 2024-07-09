@@ -18,6 +18,6 @@ class Zoo {
     +void ageAnimals()
     +void getVisited()
     +void print()
-    -void numberEnclosureTypes()
+    +void numberEnclosureTypes()
 }
 @enduml
