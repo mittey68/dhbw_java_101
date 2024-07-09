@@ -77,6 +77,6 @@ Test snfjdksaf
 
 ## Musterlösung
 
-Die Musterlösung ist verfügbar unter: [GitHub Repository](https://github.com/mittey68/dhbw_java_101/src/zoo).
+Die Musterlösung ist verfügbar unter: [GitHub Repository](https://github.com/mittey68/dhbw_java_101/tree/main/src/zoo).
 
 Viel Erfolg beim Bearbeiten der Aufgaben!
